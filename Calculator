@@ -1,0 +1,42 @@
+def add(num1, num2):
+  """Adds two numbers together."""
+  return num1 + num2
+
+def subtract(num1, num2):
+  """Subtracts the second number from the first number."""
+  return num1 - num2
+
+def multiply(num1, num2):
+  """Multiplies two numbers together."""
+  return num1 * num2
+
+def divide(num1, num2):
+  """Divides the first number by the second number."""
+  return num1 / num2
+
+while True:
+  # Get the operation from the user
+  operation = input("Enter an operation (+, -, *, /): ")
+
+  # Get the two numbers from the user
+  num1 = float(input("Enter the first number: "))
+  num2 = float(input("Enter the second number: "))
+
+  if operation == "+":
+    result = add(num1, num2)
+  elif operation == "-":
+    result = subtract(num1, num2)
+  elif operation == "*":
+    result = multiply(num1, num2)
+  elif operation == "/":
+    result = divide(num1, num2)
+  else:
+    print("Invalid operation.")
+    continue
+
+  print(f"{num1} {operation} {num2} = {result}")
+
+  # Ask the user if they want to continue
+  choice = input("Continue? (y/n): ")
+  if choice != "y":
+    break
